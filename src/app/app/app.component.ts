@@ -3,12 +3,12 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'My Angular Website First Page';
-  
-  para(){
-    alert("Pakistan");
+  title = 'angular-class';
+
+  hitMe() {
+    console.log('i am hited');
   }
 }

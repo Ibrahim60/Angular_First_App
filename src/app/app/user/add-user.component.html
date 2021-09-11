@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            Add user
+        </div>
+        <div class="card-body">
+            <form [formGroup]='userForm' ngNativeValidate (ngSubmit)='onSubmit()'>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">First name</label>
+                    <input required type="text" class="form-control" formControlName='firstName' placeholder="Enter 1st name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">last name</label>
+                    <input type="text" class="form-control" formControlName='lastName' placeholder="Last name">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button> &nbsp;
+                <button type="button" class="btn btn-light" (click)='onLoad()'>Load data</button>
+            </form>
+        </div>
+    </div>
+    <div>
+        <table class="table">
+            <tr>
+                <th>First name</th>
+                <td>{{userForm.value.firstName}}</td>
+            </tr>
+            <tr>
+                <th>Last name</th>
+                <td>{{userForm.value.lastName}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
